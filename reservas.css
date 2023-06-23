@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagen {
+  height: 40%;
+  width: 18%;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/*Imagen del mapa del restaurante*/
+.mapa {
+  height: 60%;
+  width: 50%;
+  margin-left: 320px;
+}
+
+/* Header*/
+header {
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+/* Titulo*/
+h1 {
+  margin: 10px;
+  text-align: center;
+}
+
+/*Etiquetas */
+.s-formulario__etiquetas input {
+  width: 300px;
+  height: 50px;
+}
+
+/* ------------------- */
+/* ------------------- */
+/* Estilos relacionados con formularios */
+
+.s-formulario {
+  width: 550px;
+  background: white; /* color de fondo del form  */
+  padding: 30px;
+  margin: 10px auto;
+  border: 1px solid#c4c4c4; /*color de borde el form*/
+  border-radius: 5px;
+}
+
+.s-formulario h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/*Cada etiqueta de formulario*/
+
+.s-formulario__etiquetas {
+  padding: 15px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Espacio de ingreso de Nombre*/
+.s-formulario__etiquetas input {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  border-color: #c4c4c4;
+}
+
+/*Boton de enviar info*/
+
+.s-boton {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ------------------- */
+/* ------------------- */
+/* Footer de la pagina*/
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

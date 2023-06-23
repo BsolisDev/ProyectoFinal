@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Registro de unidad </title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="reservas.css" >
+       
+       
+    </head>
+
+    <body>
+
+
+
+        <!--header-->
+     <header>
+      <nav>
+        
+        <ul>
+          <li>
+            <img class="imagen" id="icono-menu" src="iconham.png"></img>
+          </li>
+          <li><a href="Webpage1.html"><strong>Inicio</strong></a></li>
+          <li><a href="prueba.html"><strong>Menu</strong></a></li>
+          <li><a href=""><strong>Sobre nosotros</strong></a></li>              
+        </ul>
+      </nav>
+  </header>
+<!--header-->
+
+
+
+        <main>
+            <section >
+              <form    class="s-formulario" id="form"  >  
+                
+                <h1>Reservaciones</h1> 
+
+                <!--Cédula del usuario:-->
+                <div class="s-formulario__etiquetas">  <!--textbox-->
+                    <label><strong>Cédula</strong></label>
+                    <input type= "text" class="s-formulario__etiquetas input" name = "cedula"placeholder="Ingrese su número de cédula" id="cedula"></input>
+                        <!--textarea-->
+                </div>
+
+                <!--Nombre del usuario:-->
+                <div class="s-formulario__etiquetas">  <!--textbox-->
+                    <label><strong>Nombre</strong></label>
+                    <input type = "text" class="s-formulario__etiquetas textarea"  name = "nombre" placeholder="Ingrese su nombre" ></input>
+                        <!--textarea--> 
+                </div>
+
+                <!--Apellido del usuario:-->
+                <div class="s-formulario__etiquetas">  <!--textbox-->
+                    <label><strong>Apellido</strong></label>
+                    <input type = "text" class="s-formulario__etiquetas input" name = "apellido"placeholder="Ingrese su apellido" ></textarea>
+                        <!--textarea-->
+                </div>
+
+                <!--Correo del usuario-->
+                <div class="s-formulario__etiquetas">  <!--textbox-->
+                    <label><strong>Correo electrónico</strong></label>
+                    <input type = "email" class="s-formulario__etiquetas input" name = "correo_electronico" placeholder="Ingrese su correo electrónico" ></textarea>
+                        <!--textarea-->
+                </div>
+
+
+                <!--Teléfono del usuario-->
+                <div class="s-formulario__etiquetas">  <!--textbox-->
+                    <label><strong>Teléfono</strong></label>
+                    <input type="text" type = "tel" class="s-formulario__etiquetas input"  name = "telefono"placeholder="Ingrese su teléfono" ></input>
+                        
+                </div>
+
+
+                <!--Boton de enviar informacion de reservacion:-->
+
+                <button class="s-boton" id="registrar-usuario" type="submit"><strong>Enviar</strong></button>
+
+                                               
+              </form>
+            </section>
+
+            <section class="ubicacion" >
+                <img class="mapa" src="mapa1.png">
+            </section>
+          
+          
+          <footer>
+              <p>&copy; 2023 Restaurante</p>
+          </footer>
+
+          <script>/*-----------------------------------******Validacion entradas vacias*********----------------------------------------------------*/
+
+            const form = document.getElementById("form");
+            
+                form.addEventListener('submit', function(event) {
+                  event.preventDefault();
+            
+                  const campos = form.querySelectorAll('input');
+                  const camposFaltantes = [];
+            
+                  for (let campo of campos) {  // for...of loop itera a través de cada elemento en el array campos,se asigna el valor del elemento actual a la variable campo, y luego se verifica si el valor de ese campo es falso, es decir, si el valor es null
+                    if (!campo.value) { //Si el valor es false, se agrega el nombre del campo al array camposFaltantes utilizando el método push()
+                      camposFaltantes.push(campo.name);
+                    }
+                  }
+            
+                  if (camposFaltantes.length > 0) {
+                    swal.fire({
+                      title: "Faltan completar los siguientes campos:",
+                      text: camposFaltantes.join(", "),
+                      //type: "warning",
+                                icon : "warning"
+                    });
+                  } else {
+            
+                    swal.fire({
+                      title: "Enviado!",
+                      //type: "success",
+                                icon : "success"
+                                                    
+                    });
+            
+                    /* Vuelve a los valores originales*/
+                            const INPUT = document.querySelectorAll("input");
+                            for (let i = 0; i < INPUT.length; i++) {
+                            INPUT[i].value = "";
+                            }
+                  }
+                });//Termina validacion</script>
+
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+    </body>      
+ </html>
