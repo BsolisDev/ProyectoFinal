@@ -67,8 +67,24 @@
                                     aperiam nulla, totam molestias necessitatibus reprehenderit ducimus dolorum.
                                 </p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
-                                    <a href="#" class="btn-1">Menu</a>
+                                     <a href="#" class="btn-1" onclick="nuevaOrden()">NUEVA ORDEN</a>
+                                    <script src="javaScript.js"></script>
+
+                                     <a class="btn-1" id="mostrarLista">MENU</a><br>
+                                    <br>
+                                    <ul id="contenido" style="display: none; color: white;">
+                                     <br>
+                                    <li>Hamburguesa Premium $80 </li>
+                                    <li>Hot dog $25 </li>
+                                    <li>Papas fritas $15</li>
+                                    <li>Pizza $35 </li>
+                                    <li>Aros de cebolla $15</li>
+                                    <li>Tacos al pastor Premium $50 </li>
+                                    <li>Hamburguesa doble con queso $50</li>
+                                    <li>Hamburguesa con queso y tocineta $60</li>
+                                    <li>Empanadas $10 </li>
+                                    <li>Burritos $40 </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -87,7 +103,8 @@
                                 </p>
                                 <div class="botones">
                                     <a href="#" class="btn-1">Comprar</a>
-                                    <a href="#" class="btn-1">Menu</a>
+                                    <a href="#" class="btn-1" onclick="menu()">Menu</a>
+                                    <script src="javaScript2.js"></script>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -305,13 +322,14 @@
         </div>
 
         <div class="info-txt">
-            <h2>Informacion</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, mollitia et hic quasi est at
-                fugit, cumque voluptatum iusto neque dolore, suscipit sequi! Vero libero culpa ea quasi laborum
-                quisquam.
+            <h2>DESCUENTOS</h2>
+            <p style="color: white;">
+                Descuento con tarjeta que tenga los números 51 y 77 
             </p>
-            <a href="#" class="btn-2">Mas informacion</a>
+            <br>
+            <br>
+            <a href="#" class="btn-2" onclick="tarjeta()">Descuento con tarjeta</a>
+            <script src="javaScript3.js"></script>
         </div>
 
     </section>
