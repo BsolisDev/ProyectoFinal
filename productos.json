@@ -1,0 +1,19 @@
+[
+    {
+      "nombre": "Hamburguesa",
+      "precio": 10.99,
+      "disponibilidad": true
+    },
+    {
+      "nombre": "Taco",
+      "precio": 8.5,
+      "disponibilidad": false
+    },
+    {
+      "nombre": "Burrito",
+      "precio": 6.25,
+      "disponibilidad": true
+    }
+    
+  ]
+  
