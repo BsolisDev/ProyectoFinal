@@ -1,3 +1,4 @@
+
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 
@@ -370,7 +371,7 @@ body{
 }
 
 
-.footer {
+.container {
     padding: 100px 0px;
     display: flex;
     justify-content: space-between;
@@ -546,6 +547,19 @@ body{
 
     .links h4 {
         margin: 25px 0px 10px 0px;
+    }
+
+
+    .otravez {
+        display: inline-block;
+        padding: 15px 35px;
+        background-color: #D8241B;
+        color: #FFFFFF;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 50px;;
+
+
     }
 
 
