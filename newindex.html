@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="seasonalinfo.js">
+</head>
+<body>
+    <h1>Información de Temporada</h1>
+    <button id="show-info-btn">Mostrar Información</button>
+    <h1>Lista de Productos</h1>
+    <ul id="product-list"></ul>
+
+    <script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "productos.json",
+            dataType: "json",
+            success: function(data) {
+                var productList = $("#product-list");
+
+                data.forEach(function(product) {
+                    var productItem = $("<li></li>").text(product.nombre + " - $" + product.precio);
+
+                    if (product.disponibilidad) {
+                        productItem.append(" (Disponible)");
+                    } else {
+                        productItem.append(" (No disponible)");
+                    }
+
+                    productList.append(productItem);
+                });
+            },
+            error: function() {
+                console.log("Error al cargar los productos.");
+            }
+        });
+    });
+    </script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+</body>
+</html>
